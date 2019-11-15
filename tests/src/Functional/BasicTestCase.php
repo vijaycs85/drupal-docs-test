@@ -14,6 +14,11 @@ class BasicTestCase extends BrowserTestBase {
   /**
    * {@inheritdoc}
    */
+  protected $strictConfigSchema = FALSE;
+
+  /**
+   * {@inheritdoc}
+   */
   public static $modules = [
     // Module(s) for core functionality.
     'node',
@@ -48,7 +53,7 @@ class BasicTestCase extends BrowserTestBase {
     $this->assertSession()->statusCodeEquals(200);
 
     // Confirm that the front page contains the standard text.
-    $this->assertText($this->t('Welcome to Drupal'));
+    $this->assertText('Welcome to Drupal');
   }
 
 }
