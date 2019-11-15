@@ -1,0 +1,4 @@
+name: My module
+description: My module
+type: module
+core: 8.x
